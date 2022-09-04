@@ -2,25 +2,49 @@ import React from "react";
 import Image from "next/image";
 import HomeCard from "./home-card";
 import Grid from "@mui/material/Grid";
+import { Box } from "@mui/system";
 
 export function Banner() {
   return (
-    <div
-      style={{
-        width: "100%",
-        minWidth: "100%",
-        height: "100%",
-        position: "relative",
-        minHeight: "320px",
-        marginTop: "-5px",
-      }}
-    >
-      <Image
-        alt="banner"
-        src="/x-box-banner.jpg"
-        layout="fill"
-        objectFit="contain"
-      />
+    <div>
+      <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+        <div
+          style={{
+            width: "100%",
+            minWidth: "100%",
+            height: "100%",
+            position: "relative",
+            minHeight: "360px",
+            marginLeft: "3px",
+          }}
+        >
+          <Image
+            alt="banner"
+            src="/mobile-banner.jpg"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      </Box>
+      <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+        <div
+          style={{
+            width: "100%",
+            minWidth: "100%",
+            height: "100%",
+            position: "relative",
+            minHeight: "320px",
+            marginTop: "-5px",
+          }}
+        >
+          <Image
+            alt="banner"
+            src="/x-box-banner.jpg"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      </Box>
     </div>
   );
 }
