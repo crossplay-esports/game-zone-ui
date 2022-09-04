@@ -12,7 +12,7 @@ export function Banner() {
         height: "100%",
         position: "relative",
         minHeight: "320px",
-        marginTop: "-18px",
+        marginTop: "-5px",
       }}
     >
       <Image
