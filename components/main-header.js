@@ -17,6 +17,7 @@ import navItems from "./data/header-menu";
 import Link from "next/link";
 
 const pages = Object.keys(navItems);
+const items = Object.assign({}, navItems);
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -109,9 +110,20 @@ const ResponsiveAppBar = () => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
+                  <Link href={items[page].url}>
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: "white", display: "block" }}
+                    >
+                      <Typography
+                        style={{ fontFamily: "monospace", fontWeight: 700 }}
+                        variant="h8"
+                      >
+                        {page}
+                      </Typography>
+                    </Button>
+                  </Link>
                 ))}
               </Menu>
             </Box>
@@ -132,7 +144,7 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Game Zone
             </Typography>
             <Box
               sx={{
@@ -141,7 +153,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={navItems[page].url}>
+                <Link href={items[page].url}>
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
@@ -155,18 +167,6 @@ const ResponsiveAppBar = () => {
                     </Typography>
                   </Button>
                 </Link>
-                // <Button
-                //   key={page}
-                //   onClick={handleCloseNavMenu}
-                //   sx={{ my: 2, color: "white", display: "block" }}
-                // >
-                //   <Typography
-                //     style={{ fontFamily: "monospace", fontWeight: 700 }}
-                //     variant="h8"
-                //   >
-                //     {page}
-                //   </Typography>
-                // </Button>
               ))}
             </Box>
 

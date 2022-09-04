@@ -1,5 +1,5 @@
 const header_menu = {
-  home: {
+  Home: {
     url: "/",
   },
   "About Us": {
