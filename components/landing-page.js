@@ -79,6 +79,9 @@ const cards = [
 export default function LandingPage() {
   return (
     <div>
+      <div className="text-3xl font-bold underline">
+        Hall of Fame
+      </div>
       <Banner />
       <div
         className="container"
