@@ -113,10 +113,26 @@ const ResponsiveAppBar = () => {
                 }}
               >
                 {pages.map((page) => (
+                <Link href={navItems[page].url}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "black", display: "block" }}
+                  >
+                    <Typography
+                      style={{ fontFamily: "monospace", fontWeight: 700 }}
+                      variant="h8"
+                    >
+                      {page}
+                    </Typography>
+                  </Button>
+                </Link>
+              ))}
+                {/* {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography color="black" textAlign="center">{page}</Typography>
                   </MenuItem>
-                ))}
+                ))} */}
               </Menu>
             </Box>
             <Typography
@@ -158,18 +174,6 @@ const ResponsiveAppBar = () => {
                     </Typography>
                   </Button>
                 </Link>
-                // <Button
-                //   key={page}
-                //   onClick={handleCloseNavMenu}
-                //   sx={{ my: 2, color: "white", display: "block" }}
-                // >
-                //   <Typography
-                //     style={{ fontFamily: "monospace", fontWeight: 700 }}
-                //     variant="h8"
-                //   >
-                //     {page}
-                //   </Typography>
-                // </Button>
               ))}
             </Box>
 
