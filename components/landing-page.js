@@ -37,7 +37,7 @@ export function MobileBanner() {
         minWidth: "100%",
         height: "100%",
         position: "relative",
-        minHeight: "500px",
+        minHeight: "360px",
         //  marginTop: "20px",
       }}
     >
