@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+  .full-icon {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+}

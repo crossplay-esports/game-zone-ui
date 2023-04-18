@@ -3,6 +3,8 @@ import Image from "next/image";
 import HomeCard from "./home-card";
 import Grid from "@mui/material/Grid";
 
+import useWindowSize from "./hooks/useWindowSize";
+
 export function Banner() {
   return (
     <div
@@ -11,15 +13,41 @@ export function Banner() {
         minWidth: "100%",
         height: "100%",
         position: "relative",
-        minHeight: "320px",
-        marginTop: "-18px",
+        minHeight: "400px",
+        //  marginTop: "20px",
       }}
     >
       <Image
         alt="banner"
-        src="/x-box-banner.jpg"
+        src="/main-banner.png"
+        width="100%"
+        height="100%"
         layout="fill"
-        objectFit="contain"
+        // objectFit="contain"
+      />
+    </div>
+  );
+}
+
+export function MobileBanner() {
+  return (
+    <div
+      style={{
+        width: "100%",
+        minWidth: "100%",
+        height: "100%",
+        position: "relative",
+        minHeight: "500px",
+        //  marginTop: "20px",
+      }}
+    >
+      <Image
+        alt="banner"
+        src="/mobile-banner.png"
+        width="100%"
+        height="100%"
+        layout="fill"
+        // objectFit="contain"
       />
     </div>
   );
@@ -77,9 +105,10 @@ const cards = [
 ];
 
 export default function LandingPage() {
+  const size = useWindowSize();    
   return (
     <div>
-      <Banner />
+      {size.width > 900 ? <Banner /> : <MobileBanner /> }
       <div
         className="container"
         style={{

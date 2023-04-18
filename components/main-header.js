@@ -17,6 +17,7 @@ import navItems from "./data/header-menu";
 import Link from "next/link";
 import * as Logo from "../public/logo.jpg";
 import Image from "next/image";
+import "./main-header.module.css";
 
 const pages = Object.keys(navItems);
 
@@ -63,7 +64,7 @@ const ResponsiveAppBar = () => {
             }}
           >
             {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-            <Image src={Logo} width={64} height={64} />
+            <Image sx={{ display: { xs: "none", md: "flex" }}} className="full-icon" src={Logo} width={64} height={64} />
             <Typography
               variant="h6"
               noWrap
@@ -118,7 +119,6 @@ const ResponsiveAppBar = () => {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
             <Typography
               variant="h5"
               noWrap
@@ -135,7 +135,7 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Gamer's Genie
             </Typography>
             <Box
               sx={{

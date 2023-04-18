@@ -50,6 +50,12 @@ export function Home() {
         * {
           box-sizing: border-box;
         }
+
+        @media (max-width: 900px) {
+          .full-icon {
+              display:none;
+          }
+        }
       `}</style>
     </div>
   );
