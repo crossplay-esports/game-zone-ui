@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 
@@ -18,8 +18,8 @@ export function Body() {
         <Typography variant="h4">Overview</Typography>
         <br></br>
         <Typography paragraph variant="body1">
-          This website is operated by GameZone. Throughout the site, the terms
-          “we”, “us” and “our” refer to GameZone. GameZone offers this website,
+          This website is operated by Gamer's Genie. Throughout the site, the terms
+          “we”, “us” and “our” refer to Gamer's Genie. Gamer's Genie offers this website,
           including all information, tools and services available from this site
           to you, the user, conditioned upon your acceptance of all terms,
           conditions, policies and notices stated here.
@@ -282,7 +282,7 @@ export function Body() {
           conditions of any kind, either express or implied, including all
           implied warranties or conditions of merchantability, merchantable
           quality, fitness for a particular purpose, durability, title, and
-          non-infringement. In no case shall GameZone, our directors, officers,
+          non-infringement. In no case shall Gamer's Genie, our directors, officers,
           employees, affiliates, agents, contractors, interns, suppliers,
           service providers or licensors be liable for any injury, loss, claim,
           or any direct, indirect, incidental, punitive, special, or
@@ -303,7 +303,7 @@ export function Body() {
         </Typography>
         <Typography variant="h8">SECTION 14 - INDEMNIFICATION</Typography>
         <Typography paragraph>
-          You agree to indemnify, defend and hold harmless GameZone and our
+          You agree to indemnify, defend and hold harmless Gamer's Genie and our
           parent, subsidiaries, affiliates, partners, officers, directors,
           agents, contractors, licensors, service providers, subcontractors,
           suppliers, interns and employees, harmless from any claim or demand,

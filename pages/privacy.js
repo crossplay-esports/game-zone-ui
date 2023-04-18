@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 
@@ -18,7 +18,7 @@ export function Body() {
         <Typography variant="h4">Privacy Policy</Typography>
         <br></br>
         <Typography paragraph variant="body2">
-          GameZone Privacy Policy This Privacy Policy describes how your
+          Gamer's Genie Privacy Policy This Privacy Policy describes how your
           personal information is collected, used, and shared when you visit or
           make a purchase from (the “Site”). PERSONAL INFORMATION WE COLLECT
           When you visit the Site, we automatically collect certain information

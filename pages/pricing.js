@@ -8,7 +8,7 @@ import { Container } from "@mui/system";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 

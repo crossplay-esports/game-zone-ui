@@ -15,6 +15,8 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import navItems from "./data/header-menu";
 import Link from "next/link";
+import * as Logo from "../public/logo.jpg";
+import Image from "next/image";
 
 const pages = Object.keys(navItems);
 
@@ -41,9 +43,9 @@ const ResponsiveAppBar = () => {
 
   const darkTheme = createTheme({
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
-        main: "#1976d2",
+        main: "#FFF",
       },
     },
   });
@@ -60,7 +62,8 @@ const ResponsiveAppBar = () => {
               minHeight: "75px",
             }}
           >
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+            <Image src={Logo} width={64} height={64} />
             <Typography
               variant="h6"
               noWrap
@@ -76,7 +79,7 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              Game Zone
+              Gamer's Genie
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -110,7 +113,7 @@ const ResponsiveAppBar = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography color="black" textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -145,7 +148,7 @@ const ResponsiveAppBar = () => {
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
+                    sx={{ my: 2, color: "black", display: "block" }}
                   >
                     <Typography
                       style={{ fontFamily: "monospace", fontWeight: 700 }}

@@ -6,7 +6,7 @@ import LandingPage from "../components/landing-page";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 
@@ -25,7 +25,7 @@ export function Home() {
   return (
     <div>
       <Head>
-        <title>Game Zone</title>
+        <title>Gamer's Genie</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat&display=optional"
